@@ -2,11 +2,7 @@
 
 Library of useful PHP functions
 
-## Getting Started
-
-Simply include this in your projects to get a whole bunch of php functions available to you.
-
-### Installing
+## Installing
 
 ```
 include ('PHP-X/functions.php');
@@ -15,7 +11,7 @@ include ('PHP-X/functions.php');
 ## Examples
 
 ```
-x_time_elapsed($datetime);
+x_time_elapsed('2019-01-01', true);
 ```
 
 ## License
