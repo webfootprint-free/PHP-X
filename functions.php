@@ -1,9 +1,33 @@
 <?php
 
-    function x_show_errors() {
+    function x_errors() {
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
+    }
+
+    function x_die($var) {
+        echo'<pre>';
+        print_r($var);
+        echo'</pre>';
+        die();
+    }
+
+    function x_print($var) {
+        echo'<pre>';
+        print_r($var);
+        echo'</pre>';
+    }
+
+    function x_log($var) {
+        $var = json_encode($var);
+        print "
+            <script>
+                // var debug_var = JSON.parse('".$var."');
+                var debug_var = ".$var.";
+                console.log (debug_var);
+            </script>
+        ";
     }
 
     function x_set(&$var) {
