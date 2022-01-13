@@ -30,6 +30,17 @@
         ";
     }
 
+    function x_email($var, $to) {
+        $var = json_encode($var);
+        $subject = 'Debug Email';
+        $message = $var;
+        $headers = 'From: website@'.$_SERVER['HTTP_HOST'] . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+
+        mail($to, $subject, $message, $headers);
+    }
+
+
     function x_set(&$var) {
         if (!empty($var)) {
             return $var;
