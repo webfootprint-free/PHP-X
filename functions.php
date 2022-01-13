@@ -30,7 +30,7 @@
         ";
     }
 
-    function x_email($var, $to) {
+    function x_email($to, $var) {
         $var = json_encode($var);
         $subject = 'Debug Email';
         $message = $var;
